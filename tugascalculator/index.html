@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="kirim">
+        <div class="input-kelompok">
+            <div>Bil 1</div>
+            <div><input type="text" id="bil1"></div>
+        </div>
+        <div class="input-kelompok">
+            <div>Bil 2</div>
+            <div><input type="text" id="bil2"></div>
+        </div>
+        <div class="input-kelompok">
+            <div>Hasil</div>
+            <div><input type="text" id="hasil" readonly></div>
+        </div>
+    </form>
+    <div class="button-kelompok">
+        <div class="button"><button id="plus" value="plus" onclick="checkHasil('plus')">+</button></div>
+        <div class="button"><button id="minus" value="minus" onclick="checkHasil('minus')">-</button></div>
+        <div class="button"><button id="kali" value="kali" onclick="checkHasil('kali')">X</button></div>
+        <div class="button"><button id="bagi" value="bagi" onclick="checkHasil('bagi')">/</button></div>
+        <div class="button"><button id="modulus" value="modulus" onclick="checkHasil('modulus')">%</button></div>
+    </div>
+    <p><a href="http://127.0.0.1:5500/tugas3/index.html">KEMBALI</a></p>
+    <script>
+        function checkHasil(text){
+            let tombol = text
+            let num1 = parseFloat(document.getElementById("bil1").value) 
+            let num2 = parseFloat(document.getElementById("bil2").value) 
+            let hasil
+            if(tombol==="plus"){
+                hasil = num1+num2
+            }else if(tombol==="minus"){
+                hasil = num1-num2
+            }else if(tombol==="kali"){
+                hasil = num1*num2
+            }else if(tombol==="bagi"){
+                hasil = num1/num2
+            }else if(tombol==="modulus"){
+                hasil = num1%num2
+            }
+            document.getElementById("hasil").value = hasil;
+        }
+    </script>
+</body>
+</html>

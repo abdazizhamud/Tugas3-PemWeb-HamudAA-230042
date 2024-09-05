@@ -1,0 +1,18 @@
+body{
+    padding: 10px;
+}
+.input-kelompok{
+    display: flex;
+    padding-bottom: 10px;
+}
+.input-kelompok div{
+    padding-right: 10px;
+}
+.button-kelompok{
+    display: flex;
+}
+.button{
+    display: flex;
+    padding-left: 10px;
+    border-radius: 2px solid #000;
+}

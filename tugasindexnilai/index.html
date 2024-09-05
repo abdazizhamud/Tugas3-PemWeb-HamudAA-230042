@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Index Nilai</title>
+</head>
+<body>
+    <form method="POST" name="kirim" action="">
+        <p>Masukan Angka 0-100</p>
+        <p><input type="text" id="bilangan" size="20" oninput="cekIndex()"></p>
+        <h1 id="hasil"></h1>
+    </form>
+    <p><a href="http://127.0.0.1:5500/tugas3/index.html">KEMBALI</a></p>
+    <script>
+        function cekIndex(){
+            let angka = document.kirim.bilangan.value
+            let hasilElement = document.getElementById("hasil");
+            if(angka>=0&&angka<=40){
+                hasilElement.textContent="E"
+            }else if(angka>=41&&angka<=55){
+                hasilElement.textContent="D"
+            }else if(angka>=56&&angka<=60){
+                hasilElement.textContent="C"
+            }else if(angka>=61&&angka<=65){
+                hasilElement.textContent="BC"
+            }else if(angka>=66&&angka<=70){
+                hasilElement.textContent="B"
+            }else if(angka>=71&&angka<=80){
+                hasilElement.textContent="AB"
+            }else if(angka>=81&&angka<=100){
+                hasilElement.textContent="A"
+            }else{
+                hasilElement.textContent="ANGKA SALAH"
+            }
+        }   
+    </script>
+</body>
+</html>
